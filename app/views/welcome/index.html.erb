@@ -1,2 +1,13 @@
 
-Hello welcome
+<%= RegularObject.new("john").name %> <br>
+<%= RegularObject.new("Mary").name %> <br><br>
+
+<%= CustomSingleton.instance("john").name %> <br>
+<%= CustomSingleton.instance("mary").name %> <br><br>
+
+<% sdb_users = SingletonModule.instance %>
+<%= sdb_users.name = ("users")%> <br>
+<% sdb_emails = SingletonModule.instance %> 
+<%= sdb_emails.name %>
+<%#= SingletonModule.new %>
+<%# above line gives NoMethod error because singleton makes new method as private %>
