@@ -8,6 +8,23 @@
 <% sdb_users = SingletonModule.instance %>
 <%= sdb_users.name = ("users")%> <br>
 <% sdb_emails = SingletonModule.instance %> 
-<%= sdb_emails.name %>
+<%= sdb_emails.name %><br><br>
 <%#= SingletonModule.new %>
 <%# above line gives NoMethod error because singleton makes new method as private %>
+
+<% ub = UserBuilder.build do |builder|
+  builder.set_name('John', 'Doe')
+  builder.set_birthday('1999-03-02')
+  builder.set_as_on_hold
+  builder.set_as_men
+  builder.set_as_admin
+  builder.set_login_credentials('test@test.com', 'abcdef')
+  end 
+%>
+Name:-
+<%= ub.first_name %>
+<%= ub.last_name %><br>
+Birthdate:-
+<%= ub.birthday %><br>
+Email:-
+<%= ub.email %>
