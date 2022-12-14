@@ -10,8 +10,8 @@ class ConcretePrototype1 < Prototype
     return self.clone
   end
 
-  def UsePrototype
-    puts "Inside ConcreatePrototype1:UsePrototype()"
+  def useprototype
+    puts "Inside ConcreatePrototype1:useprototype()"
   end
 end
 
@@ -20,8 +20,8 @@ class ConcretePrototype2 < Prototype
     return self.clone
   end
 
-  def UsePrototype
-    puts "Inside ConcreatePrototype2:UsePrototype()"
+  def useprototype
+    puts "Inside ConcreatePrototype2:useprototype()"
   end
 end
 
@@ -29,7 +29,7 @@ cp1obj = ConcretePrototype1.new
 cp2obj = ConcretePrototype2.new
 
 cpobj = cp1obj.Clone
-cpobj.UsePrototype
+cpobj.useprototype
 
 cpobj = cp2obj.Clone
-cpobj.UsePrototype
+cpobj.useprototype

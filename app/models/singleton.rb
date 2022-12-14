@@ -4,14 +4,14 @@ require "singleton"
 class UserData
   include Singleton
 
-  def SetData(num)
+  def setdata(num)
     @data = num 
   end
 
-  def GetData
+  def getdata
     return @data
   end
 end
 
-UserData.instance().SetData(20)
-puts "Data=#{UserData.instance().GetData()}"
+UserData.instance().setdata(20)
+puts "Data=#{UserData.instance().getdata()}"
